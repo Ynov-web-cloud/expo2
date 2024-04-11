@@ -6,10 +6,11 @@
 
 import { StyleSheet, Text, View } from 'react-native';
 import React, { useState, useEffect } from 'react';
+// import Auth from '../src/components/auth'
 
-import { loginWithPhoneNumber } from "./firebase/auth_phone_signin";
+import { loginWithPhoneNumber } from "../firebase/auth_phone_signin";
 
-import './scss/main.scss'
+import '../scss/main.scss'
 
 export default function App() {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -36,6 +37,7 @@ export default function App() {
       />
       <button className='submit' type="submit" onClick={() => { loginWithPhoneNumber(phoneNumber) }}>Submit</button>
       <div id='recaptcha-container'></div>
+      {/* <Auth /> */}
     </View>
   );
 }
