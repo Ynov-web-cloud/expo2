@@ -3,6 +3,7 @@
     "experiments": {
       "baseUrl": "/expo2"
     },
+    "scheme": "web-cloud-ynov",
     "name": "expo2",
     "slug": "expo2",
     "version": "1.0.0",
@@ -29,6 +30,8 @@
       "package": "com.niewtone.webcloudynov"
     },
     "web": {
+      "bundler": "metro",
+      "output": "static",
       "favicon": "./assets/favicon.png"
     },
     "extra": {
@@ -36,6 +39,9 @@
         "projectId": "4fa15150-35eb-4a25-ab15-01abb63a1f93"
       }
     },
-    "owner": "niewtone"
+    "owner": "niewtone",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

@@ -6,6 +6,7 @@
 
 import app from "../firebaseConfig"
 import { getAuth, signInWithPhoneNumber, RecaptchaVerifier, applyActionCode } from "firebase/auth";
+import { verifyCode } from "./auth_phone_verify_code";
 
 const auth = getAuth(app);
 
@@ -25,6 +26,7 @@ export const loginWithPhoneNumber = async (phoneNumber) => {
   signInWithPhoneNumber(auth, phoneNumber, appVerifier)
     .then((confirmationResult) => {
       window.confirmationResult = confirmationResult
+      verifyCode(789789)
       console.log(confirmationResult)
       return confirmationResult
     }).catch((error) => {
